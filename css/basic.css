@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+
+body { font-family: 'Amatic SC', cursive;
+    animation:sky 20s infinite linear;}
+h1 {    
+    position: absolute;    
+    top:700px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    color: #fff;
+    
+}
+section {    
+    position:absolute;
+    width:1000px;
+    height:400px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-70%);
+}
+section .sky {}
+section .sky  .sun {
+    position:absolute;
+    left: 50%;
+    top: -150px;
+    animation:sun 20s infinite linear;
+    transform-origin: center 500px;
+}
+section .sky .cloud1 {
+    position:absolute;
+    left: -30px;
+    top: -20px;
+    animation:flow 15s infinite linear;
+}
+section .sky .cloud2 {
+    position:absolute;
+    left: 0;
+    top: 0;
+    animation:flow 20s infinite linear;
+
+}
+section .town {}
+section .town .circle {
+    position: absolute;
+    left: 230px;
+    bottom: 90px;
+    margin-left: 100px;
+    animation:rotate 20s infinite linear;    
+}
+section .town .town_night {
+    position: absolute;
+    left:40px;
+    bottom: -50px;
+}
+section .town .town_day {
+    position: absolute;
+    left:40px;
+    bottom: -50px;
+    animation: day 20s infinite linear;
+}
+
+section .people {}
+section .people .man {position: absolute; left: 0; bottom: -50px;
+    animation:flow 15s infinite linear;}
+section .people .family {position: absolute; left: 0; bottom: -50px;
+    animation:flow 20s infinite linear;}
+
+@keyframes sky {
+    0% {background-color:rgb(14, 11, 13);}
+    25% {background-color:rgb(24, 86, 201);}    /*낮*/
+    50% {background-color:rgb(159, 218, 249);}  /*낮12시*/
+    75% {background-color:rgb(246, 169, 93);}   /*밤*/
+    100% {background-color:rgb(39, 20, 8);}
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes sun {
+    0% {opacity:0 ; transform: rotate(-90deg);}
+    25% {opacity:1 ; transform: rotate(-30deg);}   /*낮*/
+    50% {opacity:1 ; transform: rotate(30deg);}    /*완전 대낮*/
+    75% {opacity:0 ; transform: rotate(90deg);}     /*완전 밤*/
+    100% {opacity:0 ; transform: rotate(-90deg);}
+}
+
+@keyframes day {
+    0% {opacity:0 ; }
+    25% {opacity:1 ; }   /*낮*/
+    50% {opacity:1 ; }    /*완전 대낮*/
+    75% {opacity:0 ; }     /*완전 밤*/
+    100% {opacity:0 ;}
+}
+
+@keyframes flow {
+    0% {opacity:0; left: 0;  }
+    10% {opacity:1;}
+    90% {opacity:1;}
+    100% {opacity:0; left: 90%;}
+}
+
+
+
+
+
